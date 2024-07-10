@@ -13,6 +13,9 @@
     "preview": "vite preview",
     "prepare": "husky || true"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": "npm run lint"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-avatar": "^1.1.0",
