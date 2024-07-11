@@ -1,10 +1,18 @@
-import { Button } from '@/components'
+import { HelmetProvider, Helmet } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
+
+import { QueryClientProvider } from '@tanstack/react-query'
+
+import { queryCLient } from './lib'
+import { router } from './routes'
 
 export default function App() {
   return (
-    <main className='flex h-screen w-full flex-col items-center justify-center bg-gray-800'>
-      <p className='mb-5 text-4xl text-white'>Snapflow</p>
-      <Button>Button</Button>
-    </main>
+    <HelmetProvider>
+      <Helmet titleTemplate='%s | Snapflow' />
+      <QueryClientProvider client={queryCLient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </HelmetProvider>
   )
 }
