@@ -20,6 +20,7 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react-refresh/only-export-components': 'off',
+    'tailwindcss/no-custom-classname': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
