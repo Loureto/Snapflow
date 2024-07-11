@@ -5,7 +5,7 @@ import { TansTackQueryProvider } from '@/providers'
 import App from './app.tsx'
 import './globals.css'
 
-const test = ''
+const test = 'a'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <TansTackQueryProvider>
